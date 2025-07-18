@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\..\common.props"></Import>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>MyTraining1101Demo</RootNamespace>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="NewFolder1\**" />
+		<Compile Remove="NewFolder\**" />
+		<EmbeddedResource Remove="NewFolder1\**" />
+		<EmbeddedResource Remove="NewFolder\**" />
+		<None Remove="NewFolder1\**" />
+		<None Remove="NewFolder\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Abp.Web.Common" Version="7.0.1" />
+		<PackageReference Include="Microsoft.Graph" Version="5.84.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MyTraining1101Demo.Core.Shared\MyTraining1101Demo.Core.Shared.csproj" />
+	</ItemGroup>
+</Project>
